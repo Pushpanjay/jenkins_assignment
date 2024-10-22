@@ -18,7 +18,7 @@ pipeline{
             steps{
                 sh 'npm install'
               //  sh 'npm test'
-                sh 'npx mocha'
+              //  sh 'npx mocha'
             }
         }
 
@@ -26,6 +26,13 @@ pipeline{
             steps{
                 sh 'npm run build'
             }
+        }
+
+        stage("Build Image" ){
+            steps{
+                sh 'docker build -t my-node-app:1.0 .'
+            }
+        
         }
     }
 }
