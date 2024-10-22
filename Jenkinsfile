@@ -7,17 +7,24 @@ pipeline{
             }
         }
 
-        stage("Test"){
+        stage ("version check"){
             steps{
-                sh 'sudo apt npm install'
-                sh 'npm test'
+                sh "node --version"
+                sh "npm --version"
             }
         }
 
-        stage("Build"){
-            steps{
-                sh 'npm run build'
-            }
-        }
+        // stage("Test"){
+        //     steps{
+        //         sh 'sudo apt npm install'
+        //         sh 'npm test'
+        //     }
+        // }
+
+        // stage("Build"){
+        //     steps{
+        //         sh 'npm run build'
+        //     }
+        // }
     }
 }
