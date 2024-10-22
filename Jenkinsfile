@@ -17,7 +17,8 @@ pipeline{
         stage("Test"){
             steps{
                 sh 'npm install'
-                sh 'npm test'
+              //  sh 'npm test'
+                sh 'npx mocha'
             }
         }
 
