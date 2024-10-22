@@ -14,17 +14,17 @@ pipeline{
             }
         }
 
-        // stage("Test"){
-        //     steps{
-        //         sh 'sudo apt npm install'
-        //         sh 'npm test'
-        //     }
-        // }
+        stage("Test"){
+            steps{
+                sh 'sudo apt npm install'
+                sh 'npm test'
+            }
+        }
 
-        // stage("Build"){
-        //     steps{
-        //         sh 'npm run build'
-        //     }
-        // }
+        stage("Build"){
+            steps{
+                sh 'npm run build'
+            }
+        }
     }
 }
