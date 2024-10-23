@@ -45,7 +45,7 @@ pipeline{
         stage("Push Image") {
             steps {
                 sh 'docker tag my-node-app:1.0 pushpanjay/my-node-app:1.0'
-                sh 'docker push your_dockerhub_username/my-node-app:1.0'
+                sh 'docker push pushpanjay/my-node-app:1.0'
             }
         }
         }
